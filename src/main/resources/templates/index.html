@@ -7,7 +7,8 @@
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
-    <h2>TechJobs</h2>
+    <img class="banner" th:src="@{../images/techjobs_banner-no-bg.png}" height="220" width="633" src="../static/images/techjobs_banner.png" alt="TechJobs logo"/>
+        <h2>Available Jobs:</h2>
     <ul>
         <li th:each="job : ${jobs}">
             <a th:href="@{'/view/' + ${job.id}}" th:text="${job.name}"></a>
